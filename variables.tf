@@ -1,22 +1,22 @@
 variable "aws_account_id" {
-  default = "902107193506"
+  default = "<account-id>"
 }
 
 variable "aws_region" {
-  default = "us-west-2"
+  default = "<region>"
 }
 
 variable "vpc_id" {
-  default = "vpc-05035bf257cf152ce"
+  default = "vpc-xxxx"
 }
 
 variable "subnets" {
   type = list(string)
   default = [
-    "subnet-0bf4b2a7917b38ae8",
-    "subnet-0958e1e512b95af14",
-    "subnet-0914e9eee28e4b50e",
-    "subnet-057f5b4a52ce48fc5"
+    "subnet-xxxx",
+    "subnet-xxxx",
+    "subnet-xxxx",
+    "subnet-xxxx"
   ]
 }
 
@@ -29,15 +29,15 @@ variable "image_tag" {
 }
 
 variable "image_repo_url" {
-  default = "902107193506.dkr.ecr.us-west-2.amazonaws.com/flask-application-demo"
+  default = "<account-id>.dkr.ecr.<region>.amazonaws.com/<image-repo-name>"
 }
 
 variable "github_repo_owner" {
-  default = "m3rryqold"
+  default = "<username>"
 }
 
 variable "github_repo_name" {
-  default = "terraform-ecs-codepipeline-flask-demo"
+  default = "Terraform-ECS-Codepipeline-Flask-Demo"
 }
 
 variable "github_branch" {
