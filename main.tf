@@ -56,13 +56,13 @@ resource "aws_codestarconnections_connection" "example" {
 }
 
 resource "aws_s3_bucket" "codepipeline_bucket" {
-  bucket = "flask-demo-codepipeline-bucket"
+  bucket = "flask-demo-codepipeline-bucket-oa"
 }
 
-resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
-  bucket = aws_s3_bucket.codepipeline_bucket.id
-  acl    = "private"
-}
+# resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
+#   bucket = aws_s3_bucket.codepipeline_bucket.id
+#   acl    = "private"
+# }
 
 resource "aws_iam_role" "codepipeline_role" {
   name = "flask_demo_codepipeline_role"

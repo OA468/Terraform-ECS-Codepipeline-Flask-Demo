@@ -1,22 +1,21 @@
 variable "aws_account_id" {
-  default = "<account-id>"
+  default = "700666750267"
 }
 
 variable "aws_region" {
-  default = "<region>"
+  default = "eu-west-2"
 }
 
 variable "vpc_id" {
-  default = "vpc-xxxx"
+  default = "vpc-0cc151d65aa1fed06"
 }
 
 variable "subnets" {
   type = list(string)
   default = [
-    "subnet-xxxx",
-    "subnet-xxxx",
-    "subnet-xxxx",
-    "subnet-xxxx"
+    "subnet-0b70a0e9225a95bdd",
+    "subnet-06e0bfa23b08a9b9d",
+    "subnet-0a45281d6affeac04"
   ]
 }
 
@@ -29,11 +28,11 @@ variable "image_tag" {
 }
 
 variable "image_repo_url" {
-  default = "<account-id>.dkr.ecr.<region>.amazonaws.com/<image-repo-name>"
+  default = "700666750267.dkr.ecr.eu-west-2.amazonaws.com/flask-application-demo"
 }
 
 variable "github_repo_owner" {
-  default = "<username>"
+  default = "OA468"
 }
 
 variable "github_repo_name" {

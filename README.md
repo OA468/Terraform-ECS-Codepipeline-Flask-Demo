@@ -3,8 +3,9 @@ Here, we explore continuously deploying a flask application to AWS ECS via AWS C
 
 ## Prerequisite
 1. AWS account
-2. ECR repository
-3. Configure all variables in `variables.tf`
+2. ECR repository (name used here is `flask-application-demo`)
+3. KMS key (name used here is `flask_app_s3kmskey`)
+4. Configure all variables in `variables.tf`
 ## Usage
 ### Step 1
 Clone the repository
@@ -30,4 +31,9 @@ terraform plan
 Apply infrastructure:
 ```bash
 terraform apply
+```
+
+### To destroy all resources
+```bash
+terraform destroy
 ```
